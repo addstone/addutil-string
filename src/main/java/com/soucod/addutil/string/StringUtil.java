@@ -6,12 +6,9 @@ package com.soucod.addutil.string;
  */
 public class StringUtil {
 
-    public static void main(String[] args) {
-        System.out.println("Hello addutil");
-    }
-
     /**
-     * 检测 cs 是否为空,仅null或空格
+     * 检测 String 是否为空,仅null或空格
+     * 
      * <pre>
      * StringUtils.isBlank(null)      = true
      * StringUtils.isBlank("")        = true
@@ -33,10 +30,8 @@ public class StringUtil {
      *
      * @param cs  the CharSequence to check, may be null
      * @return {@code true} if the CharSequence is null, empty or whitespace only
-     * @since 2.0
-     * @since 3.0 Changed signature from isBlank(String) to isBlank(CharSequence)
+     * Changed signature from isBlank(String) to isBlank(CharSequence)
      * @param cs 可以为 null
-     * @return
      * @since 0.0.0.1
      */
     public static boolean isBlank(final CharSequence cs){
@@ -52,17 +47,10 @@ public class StringUtil {
         return true;
     }
 
-    /**
-     * 获取 cs 的长度,如果cs为
-     * @param cs
-     * @return
-     */
-    public static int length(final CharSequence cs){
-        return cs == null ? 0 : cs.length() ;
-    }
 
-	/**
-     * 判断字符串是否为空 ("")
+    /**
+     * 判断 String 是否为空 ("")
+     * 
      * <pre>
      * StringUtils.isEmpty(null)      = true
      * StringUtils.isEmpty("")        = true
@@ -71,15 +59,14 @@ public class StringUtil {
      * StringUtils.isEmpty("  bob  ") = false
      * </pre>
      * @param cs
-     * @return
      * @since 0.0.0.1
      */
     public static boolean isEmpty(final CharSequence cs) {
-      return  cs == null  && cs.length() == 0 ;
+        return  cs == null  && cs.length() == 0 ;
     }
 
 
-        /**
+    /**
      * <p>Checks if the CharSequence contains only whitespace.</p>
      *
      * <p>Whitespace is defined by {@link Character#isWhitespace(char)}.</p>
@@ -98,8 +85,8 @@ public class StringUtil {
      *
      * @param cs  the CharSequence to check, may be null
      * @return {@code true} if only contains whitespace, and is non-null
-     * @since 2.0
-     * @since 3.0 Changed signature from isWhitespace(String) to isWhitespace(CharSequence)
+     * Changed signature from isWhitespace(String) to isWhitespace(CharSequence)
+     * @since 0.0.0.1
      */
     public static boolean isWhitespace(final CharSequence cs) {
         if(cs ==null){
@@ -113,6 +100,27 @@ public class StringUtil {
         }
         return true;
     }
+
+
+    /**
+     * 获取 String 的长度,如果cs为
+     * 
+     * Gets a CharSequence length or {@code 0} if the CharSequence is
+     * {@code null}.
+     *
+     * @param cs
+     *            a CharSequence or {@code null}
+     * @return CharSequence length or {@code 0} if the CharSequence is
+     *         {@code null}.
+     * Changed signature from length(String) to length(CharSequence)
+     * @since 0.0.0.1
+     */
+    public static int length(final CharSequence cs) {
+        return cs == null ? 0 : cs.length();
+    }
+
+
+
 
 
 }
