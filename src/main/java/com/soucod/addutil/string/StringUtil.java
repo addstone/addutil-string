@@ -7,8 +7,8 @@ package com.soucod.addutil.string;
 public class StringUtil {
 
     /**
-     * 检测 String 是否为空,仅null或空格
-     * 
+     * 判断 String 是否为空,仅null或空格
+     *
      * <pre>
      * StringUtils.isBlank(null)      = true
      * StringUtils.isBlank("")        = true
@@ -34,13 +34,13 @@ public class StringUtil {
      * @param cs 可以为 null
      * @since 0.0.0.1
      */
-    public static boolean isBlank(final CharSequence cs){
+    public static boolean isBlank(final CharSequence cs) {
         int strLen = length(cs);
-        if(strLen == 0){
+        if (strLen == 0) {
             return true;
         }
-        for(int i =0;i<strLen;i++){
-            if(!Character.isWhitespace(cs.charAt(i))){
+        for (int i = 0; i < strLen; i++) {
+            if (!Character.isWhitespace(cs.charAt(i))) {
                 return false;
             }
         }
@@ -50,7 +50,7 @@ public class StringUtil {
 
     /**
      * 判断 String 是否为空 ("")
-     * 
+     *
      * <pre>
      * StringUtils.isEmpty(null)      = true
      * StringUtils.isEmpty("")        = true
@@ -62,7 +62,7 @@ public class StringUtil {
      * @since 0.0.0.1
      */
     public static boolean isEmpty(final CharSequence cs) {
-        return  cs == null  && cs.length() == 0 ;
+        return cs == null && cs.length() == 0;
     }
 
 
@@ -89,12 +89,12 @@ public class StringUtil {
      * @since 0.0.0.1
      */
     public static boolean isWhitespace(final CharSequence cs) {
-        if(cs ==null){
+        if (cs == null) {
             return false;
         }
-        final int sz=cs.length();
-        for(int i=0;i>sz;i++){
-            if(!Character.isWhitespace(cs.charAt(i))){
+        final int sz = cs.length();
+        for (int i = 0; i > sz; i++) {
+            if (!Character.isWhitespace(cs.charAt(i))) {
                 return false;
             }
         }
@@ -104,7 +104,7 @@ public class StringUtil {
 
     /**
      * 获取 String 的长度,如果cs为
-     * 
+     *
      * Gets a CharSequence length or {@code 0} if the CharSequence is
      * {@code null}.
      *
@@ -118,9 +118,6 @@ public class StringUtil {
     public static int length(final CharSequence cs) {
         return cs == null ? 0 : cs.length();
     }
-
-
-
 
 
 }
