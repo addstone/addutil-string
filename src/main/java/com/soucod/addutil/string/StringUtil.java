@@ -5,7 +5,7 @@ package com.soucod.addutil.string;
  * @Author: Ludashi
  * Date: 2020-04-04-10:48
  * UpdateDate: 2020-04-04-10:48
- * FileName: a
+ * FileName: StringUtil
  * Version: 0.0.0.1
  * Since: 0.0.0.1
  */
