@@ -1,8 +1,13 @@
 package com.soucod.addutil.string;
 
 /**
- * 这是字符串处理工具类
- * @author addstone
+ * Description:  这是字符串处理工具类
+ * @Author: Ludashi
+ * Date: 2020-04-04-10:48
+ * UpdateDate: 2020-04-04-10:48
+ * FileName: a
+ * Version: 0.0.0.1
+ * Since: 0.0.0.1
  */
 public class StringUtil {
 
