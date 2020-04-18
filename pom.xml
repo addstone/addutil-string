@@ -71,23 +71,32 @@
     </issueManagement>
 
     <distributionManagement>
-        <snapshotRepository>
-            <id>snapshot</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
+        <!--        <repository>-->
+        <!--            <id>releases</id>-->
+        <!--            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+        <!--        </repository>-->
+        <!--        <snapshotRepository>-->
+        <!--            <id>snapshot</id>-->
+        <!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+        <!--        </snapshotRepository>-->
+
         <repository>
-            <id>releases</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/77949-release-NaSNQf/</url>
         </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/77949-snapshot-Vs0XUt/</url>
+        </snapshotRepository>
     </distributionManagement>
 
 
     <dependencies>
-		<dependency>
-			<groupId>com.soucod.addutil</groupId>
-			<artifactId>addutil</artifactId>
-			<version>${soucod.addutil.version}</version>
-		</dependency>
+        <dependency>
+            <groupId>com.soucod.addutil</groupId>
+            <artifactId>addutil</artifactId>
+            <version>${soucod.addutil.version}</version>
+        </dependency>
     </dependencies>
 
 
@@ -240,7 +249,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-release-plugin</artifactId>
-                    <version>2.4.2</version>
+                    <version>2.5.3</version>
                 </plugin>
 
 
